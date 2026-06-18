@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Arquitectura TFG" id="r796nzpaqAmsxUhpBmJ1">
+    <mxGraphModel dx="1084" dy="555" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuario / Internet / https://www.tfgdanrod.com" vertex="1">
+          <mxGeometry height="60" width="190" x="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Nginx" vertex="1">
+          <mxGeometry height="60" width="120" x="475" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="PHP&lt;br&gt;auto_prepend_file&lt;div&gt;logs_ataques.php&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="150" x="460" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="MySQL&#xa;attack_logs" vertex="1">
+          <mxGeometry height="90" width="150" x="460" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Panel Web&lt;br&gt;logs.php&lt;br&gt;grafica.php&lt;div&gt;repositorio_pcap.php&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="310" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="TShark" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Repositorio PCAP&#xa;/var/log/pcap" vertex="1">
+          <mxGeometry height="70" width="160" x="140" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-8" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-1" target="GxhhP3J1X_F-a9_ZyEsN-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-9" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-2" target="GxhhP3J1X_F-a9_ZyEsN-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-10" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-3" target="GxhhP3J1X_F-a9_ZyEsN-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-11" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-4" target="GxhhP3J1X_F-a9_ZyEsN-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-13" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-6" target="GxhhP3J1X_F-a9_ZyEsN-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-14" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-7" target="GxhhP3J1X_F-a9_ZyEsN-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GxhhP3J1X_F-a9_ZyEsN-17" edge="1" parent="1" source="GxhhP3J1X_F-a9_ZyEsN-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="GxhhP3J1X_F-a9_ZyEsN-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
