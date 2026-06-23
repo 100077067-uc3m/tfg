@@ -12,10 +12,19 @@ if (!isset($_SESSION['user'])) {
 $totalficheros = glob('/var/log/pcap' . '/*.pcap');
 
 //Después ordenamos con rsort de manera descendente
+//rsort($totalficheros);
 
-rsort($totalficheros);
 
-//Creamos la función siguiente para poner el formato 20260513172648 del nombre del fichero a formato fecha 2026-05-13 17:26:48 
+usort($totalficheros, function($a, $b) {
+
+    preg_match('/_(\d{14})\.pcap$/', basename($a), $fechaA);
+    preg_match('/_(\d{14})\.pcap$/', basename($b), $fechaB);
+
+    return strcmp($fechaB[1], $fechaA[1]);
+
+});
+
+//Creamos la función siguiente para poner el formato 20260513172648 del nombre del fichero a formato fecha 2026-05-13 17:26:48
 
 function formatoFechaPcap($fechasinformato) {
     $fechaconformato = DateTime::createFromFormat('YmdHis', $fechasinformato);
