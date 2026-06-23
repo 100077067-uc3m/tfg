@@ -75,7 +75,7 @@ foreach ($totalficheros as $fichero):
     <td><?= htmlspecialchars(formatoFechaPcap($fechasinsignos)) ?></td>
     <td class="filename"><?= htmlspecialchars($nombre) ?></td>
     <td><?= $tamano ?></td>
-    <td><a href="download.php?fichero=<?= urlencode($name) ?>">Descargar</a></td>
+    <td><a href="download.php?fichero=<?= urlencode(nombre) ?>">Descargar</a></td>
 </tr>
 <?php endforeach; ?>
 
